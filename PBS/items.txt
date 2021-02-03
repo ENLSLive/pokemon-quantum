@@ -650,3 +650,6 @@
 634,TELEPORTDEVICEW,Teleport Device,Teleport Devices,8,0,"This futuristic device allows you to teleport anywhere you want in the world.",2,0,6,
 635,TELEPORTDEVICEB,Teleport Device,Teleport Devices,8,0,"This futuristic device allows you to teleport anywhere you want in the world.",2,0,6,
 636,TELEPORTDEVICEP,Teleport Device,Teleport Devices,8,0,"This futuristic device allows you to teleport anywhere you want in the world.",2,0,6,
+637,BROKENTELEPORTDEVICEW,Broken Teleport Device,Teleport Devices,8,0,"This futuristic device allows you to teleport anywhere you want in the world.",2,0,6,
+638,BROKENTELEPORTDEVICEB,Broken Teleport Device,Teleport Devices,8,0,"This futuristic device allows you to teleport anywhere you want in the world.",2,0,6,
+639,BROKENTELEPORTDEVICEP,Broken Teleport Device,Teleport Devices,8,0,"This futuristic device allows you to teleport anywhere you want in the world.",2,0,6,
