@@ -160,6 +160,19 @@ MapPosition = 0,14,6
 Outdoor = true
 ShowArea = true
 #-------------------------------
+[032]
+# Oak Town
+Bicycle = false
+Outdoor = true
+Environment = None
+ShowArea = true
+#-------------------------------
+[033]
+# Oak Town
+Bicycle = false
+Outdoor = false
+ShowArea = false
+#-------------------------------
 [034]
 # Ice Cave
 BattleBack = cave1
@@ -210,6 +223,18 @@ Outdoor = true
 BicycleAlways = true
 ShowArea = true
 #-------------------------------
+[042]
+# Route 1
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[043]
+# Oak Town Gate
+Bicycle = false
+Outdoor = false
+ShowArea = false
+#-------------------------------
 [044]
 # Route 6
 MapSize = 2,11
@@ -239,6 +264,12 @@ MapPosition = 0,15,10
 Outdoor = true
 Environment = Rock
 ShowArea = true
+#-------------------------------
+[048]
+# Frankly's Lab
+Bicycle = false
+Outdoor = false
+ShowArea = false
 #-------------------------------
 [049]
 # Rock Cave
