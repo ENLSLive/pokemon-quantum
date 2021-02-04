@@ -266,6 +266,22 @@ Land
     SLUGMA,13,14
     SLUGMA,13,14
 #-------------------------------
+042 # Route 1
+30,10,10
+Land
+    CATERPIE,5
+    POOCHYENA,5
+    RATTATA,5
+    SPEAROW,5
+    PIDGEY,5
+    WEEDLE,5
+    STARLY,5
+    BIDOOF,5
+	LILLIPUP,5
+    LEDYBA,5
+    SENTRET,5
+    PIKACHU,5
+#-------------------------------
 044 # Route 6
 25,10,10
 Land
