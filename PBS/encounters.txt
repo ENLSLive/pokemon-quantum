@@ -267,7 +267,7 @@ Land
     SLUGMA,13,14
 #-------------------------------
 042 # Route 1
-30,10,10
+25,10,10
 Land
     CATERPIE,5
     POOCHYENA,5
@@ -277,7 +277,7 @@ Land
     WEEDLE,5
     STARLY,5
     BIDOOF,5
-	LILLIPUP,5
+    LILLIPUP,5
     LEDYBA,5
     SENTRET,5
     PIKACHU,5

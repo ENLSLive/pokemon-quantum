@@ -8,7 +8,7 @@ WildVictoryME = Battle victory wild.ogg
 TrainerBattleBGM = Battle trainer.mid
 SurfBGM = Surfing.mid
 BicycleBGM = Bicycle.mid
-Home = 3,7,5,8
+Home = 33,29,4,6
 WildBattleBGM = Battle wild.mid
 #-------------------------------
 [001]
@@ -421,3 +421,9 @@ MapPosition = 0,12,10
 BattleBack = city
 MapPosition = 1,13,16
 Outdoor = true
+#-------------------------------
+[077]
+# Unnamed City
+Bicycle = true
+Outdoor = true
+ShowArea = true
