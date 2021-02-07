@@ -9,3 +9,10 @@ RGSS*.dll
 # Temp files
 
 ~*
+Data/Actors.rxdata
+Data/Armors.rxdata
+Data/Enemies.rxdata
+Data/Items.rxdata
+Data/Skills.rxdata
+Data/States.rxdata
+Data/Weapons.rxdata
