@@ -423,7 +423,7 @@ MapPosition = 1,13,16
 Outdoor = true
 #-------------------------------
 [077]
-# Unnamed City
+# Elm City
 Bicycle = true
 Outdoor = true
 ShowArea = true
