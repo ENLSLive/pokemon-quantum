@@ -427,3 +427,9 @@ Outdoor = true
 Bicycle = true
 Outdoor = true
 ShowArea = true
+#-------------------------------
+[081]
+# Route 2
+Bicycle = true
+Outdoor = true
+ShowArea = true
