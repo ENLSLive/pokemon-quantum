@@ -3,13 +3,13 @@
 [0]
 Name = Normal
 InternalName = NORMAL
-Weaknesses = FIGHTING
+Weaknesses = FIGHTING,QUANTUM
 Immunities = GHOST
 #-------------------------------
 [1]
 Name = Fighting
 InternalName = FIGHTING
-Weaknesses = FLYING,PSYCHIC,FAIRY
+Weaknesses = FLYING,PSYCHIC,FAIRY,QUANTUM
 Resistances = ROCK,BUG,DARK
 #-------------------------------
 [2]
@@ -29,14 +29,14 @@ Resistances = FIGHTING,POISON,BUG,GRASS,FAIRY
 Name = Ground
 InternalName = GROUND
 Weaknesses = WATER,GRASS,ICE
-Resistances = POISON,ROCK
+Resistances = POISON,ROCK,QUANTUM
 Immunities = ELECTRIC
 #-------------------------------
 [5]
 Name = Rock
 InternalName = ROCK
 Weaknesses = FIGHTING,GROUND,STEEL,WATER,GRASS
-Resistances = NORMAL,FLYING,POISON,FIRE
+Resistances = NORMAL,FLYING,POISON,FIRE,QUANTUM
 #-------------------------------
 [6]
 Name = Bug
@@ -68,7 +68,7 @@ Name = Fire
 InternalName = FIRE
 IsSpecialType = true
 Weaknesses = GROUND,ROCK,WATER
-Resistances = BUG,STEEL,FIRE,GRASS,ICE,FAIRY
+Resistances = BUG,STEEL,FIRE,GRASS,ICE,FAIRY,QUANTUM
 #-------------------------------
 [11]
 Name = Water
@@ -88,7 +88,7 @@ Resistances = GROUND,WATER,GRASS,ELECTRIC
 Name = Electric
 InternalName = ELECTRIC
 IsSpecialType = true
-Weaknesses = GROUND
+Weaknesses = GROUND,QUANTUM
 Resistances = FLYING,STEEL,ELECTRIC
 #-------------------------------
 [14]
@@ -103,7 +103,7 @@ Name = Ice
 InternalName = ICE
 IsSpecialType = true
 Weaknesses = FIGHTING,ROCK,STEEL,FIRE
-Resistances = ICE
+Resistances = ICE,QUANTUM
 #-------------------------------
 [16]
 Name = Dragon
@@ -127,3 +127,11 @@ IsSpecialType = true
 Weaknesses = POISON,STEEL
 Resistances = FIGHTING,BUG,DARK
 Immunities = DRAGON
+#-------------------------------
+[19]
+Name = Quantum
+InternalName = QUANTUM
+IsSpecialType = true
+Weaknesses = ROCK,ICE,FIRE
+Resistances = FIGHTING,NORMAL,PSYCHIC
+Immunities = ELECTRIC

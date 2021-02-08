@@ -26511,7 +26511,7 @@ Evolutions =
 [812]
 Name = Wabby
 InternalName = WABBY
-Type1 = NORMAL
+Type1 = QUANTUM
 BaseStats = 80,25,80,20,20,80
 GenderRate = Genderless
 GrowthRate = Parabolic
@@ -26542,7 +26542,7 @@ Evolutions = WATARDUM,Level,30
 [813]
 Name = Wanbit
 InternalName = WANBIT
-Type1 = NORMAL
+Type1 = QUANTUM
 BaseStats = 80,25,80,20,20,80
 GenderRate = Genderless
 GrowthRate = Parabolic
@@ -26573,7 +26573,7 @@ Evolutions =
 [814]
 Name = Watardum
 InternalName = WATARDUM
-Type1 = NORMAL
+Type1 = QUANTUM
 Type2 = FIGHTING
 BaseStats = 135,70,120,45,60,150
 GenderRate = Genderless

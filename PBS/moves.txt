@@ -485,7 +485,7 @@
 471,MILKDRINK,Milk Drink,0D5,0,NORMAL,Status,0,10,0,User,0,d,"The user restores its own HP by up to half of its maximum HP. May also be used in the field to heal HP."
 472,MIMIC,Mimic,05C,0,NORMAL,Status,0,10,0,NearOther,0,b,"The user copies the move last used by the foe. The move can be used until the user is switched out."
 473,MINDREADER,Mind Reader,0A6,0,NORMAL,Status,0,5,0,NearOther,0,be,"The user senses the foe's movements with its mind to ensure its next attack does not miss the foe."
-474,MINIMIZE,Minimize,034,0,NORMAL,Status,0,10,0,User,0,d,"The user compresses its body to make itself look smaller, which sharply raises its evasiveness."
+474,MINIMIZE,Minimize,034,0,QUANTUM,Status,0,10,0,User,0,d,"The user compresses its body to make itself look smaller, which sharply raises its evasiveness."
 475,MORNINGSUN,Morning Sun,0D8,0,NORMAL,Status,0,5,0,User,0,d,"The user restores its own HP. The amount of HP regained varies with the weather."
 476,NATUREPOWER,Nature Power,0B3,0,NORMAL,Status,0,20,0,NearOther,0,,"An attack that makes use of nature's power. Its effects vary depending on the user's environment."
 477,NOBLEROAR,Noble Roar,13A,0,NORMAL,Status,0,30,0,NearOther,0,bcek,"Letting out a noble roar, the user intimidates the target and lowers its Attack and Sp. Atk."
@@ -694,5 +694,5 @@
 675,WATERSPORT,Water Sport,09E,0,WATER,Status,0,15,0,BothSides,0,,"The user soaks itself with water. The move weakens Fire-type moves while the user is in the battle."
 676,WITHDRAW,Withdraw,01D,0,WATER,Status,0,40,0,User,0,d,"The user withdraws its body into its hard shell, raising its Defense stat."
 #-------------------------------
-677,QUANTUMLEAP,Quantum Leap,0CD,120,NORMAL,Physical,100,5,0,NearOther,0,aef,"The user shrinks, then strikes the foe on the second turn. It hits even if the foe protects itself."
-678,QUANTIZE,Quantize,176,0,NORMAL,Status,0,5,0,User,0,d,"The user shrinks down to quantum levels, increasing its evasion drastically."
+677,QUANTUMLEAP,Quantum Leap,0CD,120,QUANTUM,Physical,100,5,0,NearOther,0,aef,"The user shrinks, then strikes the foe on the second turn. It hits even if the foe protects itself."
+678,QUANTIZE,Quantize,176,0,QUANTUM,Status,0,5,0,User,0,d,"The user shrinks down to quantum levels, increasing its evasion drastically."
