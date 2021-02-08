@@ -696,3 +696,11 @@
 #-------------------------------
 677,QUANTUMLEAP,Quantum Leap,0CD,120,QUANTUM,Physical,100,5,0,NearOther,0,aef,"The user shrinks, then strikes the foe on the second turn. It hits even if the foe protects itself."
 678,QUANTIZE,Quantize,176,0,QUANTUM,Status,0,5,0,User,0,d,"The user shrinks down to quantum levels, increasing its evasion drastically."
+679,DILATE,Dilate,000,40,QUANTUM,Physical,100,20,0,NearOther,1,abef,"The user dilates back in time to hit the target. It is sure to strike first."
+680,QUANTUMPULSE,Quantum Pulse,013,60,QUANTUM,Special,100,20,20,Other,0,befm,"The user attacks the target with a pulsing blast of quantum energy. It may also confuse the target."
+681,QUANTICCHARGE,Quantic Charge,01F,50,QUANTUM,Physical,100,20,100,NearOther,0,abef,"The user cloaks itself in quantum energy and attacks. Building up more power, it raises the user's Speed stat."
+682,QUANTUMIMPACT,Quantum Impact,0C2,150,QUANTUM,Physical,90,5,0,NearOther,0,abef,"The user charges at the target using every bit of its quantum power. The user must rest on the next turn."
+683,NUCLICHARGE,Nucli Charge,0C2,150,QUANTUM,Physical,90,5,0,NearOther,0,befn,"The user launches itself with quantum energy at the target to attack. It must rest on the next turn, however."
+684,ATOMICBOOST,Atomic Boost,037,0,QUANTUM,Status,0,30,0,UserOrNearAlly,0,,"The user allows quantum energy into its body, sharply boosting one of its stats at random."
+685,FUSIONSPLIT,Fusion Split,0E0,250,QUANTUM,Physical,100,5,0,AllNearOthers,0,bef,"The user fuses and explodes to inflict damage on those around it. The user faints upon using this move."
+686,MICROSHOT,Micro Shot,044,40,QUANTUM,Special,100,30,10,AllNearFoes,0,bef,"Quantum energy is jetted at the opposing team. It may also lower the targets' Speed stats."
