@@ -428,8 +428,13 @@ Bicycle = true
 Outdoor = true
 ShowArea = true
 #-------------------------------
+[078]
+# Elm City Poké Center
+Outdoor = false
+HealingSpot = 77,27,18
+#-------------------------------
 [081]
-# MAP081
+# Route 2
 Bicycle = true
 Outdoor = true
 ShowArea = true
