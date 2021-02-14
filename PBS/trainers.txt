@@ -128,6 +128,11 @@ Pokemon = ESPEON,40
     IV = 31
     Happiness = 255
 #-------------------------------
+[ENLS,ENLS]
+Pokemon = WATARDUM,40
+Pokemon = ARCANINE,40
+    Gender = female
+#-------------------------------
 [BUGCATCHER,Carl]
 LoseText = "Aww, I lost."
 Pokemon = DIGLETT,10

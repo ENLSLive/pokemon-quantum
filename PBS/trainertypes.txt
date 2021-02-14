@@ -73,3 +73,4 @@
 70,ELITEFOUR_Lance,Elite Four,100,Battle Elite,Battle victory leader,,Male,,
 71,CHAMPION,Champion,100,Battle Elite,Battle victory leader,,Male,,
 73,VOLTSEON,Artist,100,Battle Elite,Battle victory leader,,Male,,
+74,ENLS,Wiki Guy,100,Battle Elite,Battle victory leader,,Male,,
