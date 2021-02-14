@@ -629,8 +629,7 @@ class PokeBattle_Pokemon
   #=============================================================================
   def species=(value)
     hasNickname = nicknamed?
-    @species, new_form = pbGetSpeciesFromFSpecies(value)
-    @form = new_form if @species != value
+    @species    = value
     @name       = PBSpecies.getName(@species) unless hasNickname
     @level      = nil   # In case growth rate is different for the new species
     @forcedForm = nil

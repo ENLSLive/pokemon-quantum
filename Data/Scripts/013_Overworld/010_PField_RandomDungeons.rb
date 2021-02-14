@@ -147,6 +147,9 @@ end
 
 
 
+# Dungeon generation algorithm found at:
+# http://members.gamedev.net/potentialwell/ProceduralDungeonGeneration-JTippets.pdf
+
 class MazeNode
   def initialize
     @edges=0

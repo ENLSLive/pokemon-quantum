@@ -1041,15 +1041,6 @@ def pbMessageDisplay(msgwindow,message,letterbyletter=true,commandProc=nil)
   text.gsub!(/\\pog/i,"")
   text.gsub!(/\\b/i,"<c3=3050C8,D0D0C8>")
   text.gsub!(/\\r/i,"<c3=E00808,D0D0C8>")
-  text.gsub!(/\\[Ww]\[([^\]]*)\]/) {
-    w = $1.to_s
-    if w==""
-      msgwindow.windowskin = nil
-    else
-      msgwindow.setSkin("Graphics/Windowskins/#{w}",false)
-    end
-    next ""
-  }
   isDarkSkin = isDarkWindowskin(msgwindow.windowskin)
   text.gsub!(/\\[Cc]\[([0-9]+)\]/) {
     m = $1.to_i
@@ -1080,7 +1071,7 @@ def pbMessageDisplay(msgwindow,message,letterbyletter=true,commandProc=nil)
   ### Controls
   textchunks=[]
   controls=[]
-  while text[/(?:\\(f|ff|ts|cl|me|se|wt|wtnp|ch)\[([^\]]*)\]|\\(g|cn|wd|wm|op|cl|wu|\.|\||\!|\^))/i]
+  while text[/(?:\\(w|f|ff|ts|cl|me|se|wt|wtnp|ch)\[([^\]]*)\]|\\(g|cn|wd|wm|op|cl|wu|\.|\||\!|\^))/i]
     textchunks.push($~.pre_match)
     if $~[1]
       controls.push([$~[1].downcase,$~[2],-1])
@@ -1215,6 +1206,12 @@ def pbMessageDisplay(msgwindow,message,letterbyletter=true,commandProc=nil)
         msgback.y = msgwindow.y if msgback
         pbPositionNearMsgWindow(facewindow,msgwindow,:left)
         msgwindow.y = Graphics.height-msgwindow.height*(signWaitTime-signWaitCount)/signWaitTime
+      when "w"      # Change windowskin
+        if param==""
+          msgwindow.windowskin = nil
+        else
+          msgwindow.setSkin("Graphics/Windowskins/#{param}",false)
+        end
       when "ts"     # Change text speed
         msgwindow.textspeed = (param=="") ? -999 : param.to_i
       when "."      # Wait 0.25 seconds
@@ -1247,6 +1244,16 @@ def pbMessageDisplay(msgwindow,message,letterbyletter=true,commandProc=nil)
     if autoresume && msgwindow.waitcount==0
       msgwindow.resume if msgwindow.busy?
       break if !msgwindow.busy?
+    end
+    if Input.press?(Input::B)
+      msgwindow.textspeed=-999
+      msgwindow.update
+      if msgwindow.busy?
+        pbPlayDecisionSE() if msgwindow.pausing?
+        msgwindow.resume
+      else
+        break if signWaitCount==0
+      end
     end
     if Input.trigger?(Input::C) || Input.trigger?(Input::B)
       if msgwindow.busy?

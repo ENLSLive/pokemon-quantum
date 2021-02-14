@@ -650,3 +650,9 @@
 634,TELEPORTDEVICEW,Teleport Device,Teleport Devices,8,0,"This futuristic device allows you to teleport anywhere you want in the world.",2,0,6,
 635,TELEPORTDEVICEB,Teleport Device,Teleport Devices,8,0,"This futuristic device allows you to teleport anywhere you want in the world.",2,0,6,
 636,TELEPORTDEVICEP,Teleport Device,Teleport Devices,8,0,"This futuristic device allows you to teleport anywhere you want in the world.",2,0,6,
+637,BROKENTELEPORTDEVICEW,Broken Teleport Device,Teleport Devices,8,0,"This futuristic device allows you to teleport anywhere you want in the world.",2,0,6,
+638,BROKENTELEPORTDEVICEB,Broken Teleport Device,Teleport Devices,8,0,"This futuristic device allows you to teleport anywhere you want in the world.",2,0,6,
+639,BROKENTELEPORTDEVICEP,Broken Teleport Device,Teleport Devices,8,0,"This futuristic device allows you to teleport anywhere you want in the world.",2,0,6,
+640,TM101,TM101,TM101s,4,5000,"The user charges at the target using every bit of its quantum power. The user must rest on the next turn.",3,0,0,QUANTUMIMPACT
+641,TM102,TM102,TM102s,4,5000,"The user fuses and explodes to inflict damage on those around it. The user faints upon using this move.",3,0,0,FUSIONSPLIT
+642,TM103,TM103,TM103s,4,5000,"The user dilates back in time to hit the target. It is sure to strike first.",3,0,0,DILATE

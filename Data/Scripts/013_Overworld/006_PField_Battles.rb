@@ -11,7 +11,6 @@ end
 
 
 class PokemonTemp
-  attr_accessor :encounterTriggered
   attr_accessor :encounterType
   attr_accessor :evolutionLevels
 
@@ -35,8 +34,8 @@ class PokemonTemp
     when "canrun";                 rules["canRun"]         = true
     when "cannotrun";              rules["canRun"]         = false
     when "roamerflees";            rules["roamerFlees"]    = true
-    when "noexp";                  rules["expGain"]        = false
-    when "nomoney";                rules["moneyGain"]      = false
+    when "noExp";                  rules["expGain"]        = false
+    when "noMoney";                rules["moneyGain"]      = false
     when "switchstyle";            rules["switchStyle"]    = true
     when "setstyle";               rules["switchStyle"]    = false
     when "anims";                  rules["battleAnims"]    = true
@@ -46,7 +45,7 @@ class PokemonTemp
     when "environment", "environ"; rules["environment"]    = getID(PBEnvironment,var)
     when "backdrop", "battleback"; rules["backdrop"]       = var
     when "base";                   rules["base"]           = var
-    when "outcome", "outcomevar";  rules["outcomeVar"]     = var
+    when "outcomevar", "outcome";  rules["outcomeVar"]     = var
     when "nopartner";              rules["noPartner"]      = true
     else
       raise _INTL("Battle rule \"{1}\" does not exist.",rule)
@@ -65,7 +64,7 @@ def setBattleRule(*args)
     else
       case arg.downcase
       when "terrain", "weather", "environment", "environ", "backdrop",
-           "battleback", "base", "outcome", "outcomevar"
+           "battleback", "base", "outcomevar", "outcome"
         r = arg
         next
       end
@@ -252,12 +251,7 @@ def pbWildBattleCore(*args)
   playerTrainers    = [$Trainer]
   playerParty       = $Trainer.party
   playerPartyStarts = [0]
-  room_for_partner = (foeParty.length > 1)
-  if !room_for_partner && $PokemonTemp.battleRules["size"] &&
-     !["single", "1v1", "1v2", "1v3"].include?($PokemonTemp.battleRules["size"])
-    room_for_partner = true
-  end
-  if $PokemonGlobal.partner && !$PokemonTemp.battleRules["noPartner"] && room_for_partner
+  if $PokemonGlobal.partner && !$PokemonTemp.battleRules["noPartner"] && foeParty.length>1
     ally = PokeBattle_Trainer.new($PokemonGlobal.partner[1],$PokemonGlobal.partner[0])
     ally.id    = $PokemonGlobal.partner[2]
     ally.party = $PokemonGlobal.partner[3]
@@ -266,7 +260,6 @@ def pbWildBattleCore(*args)
     $Trainer.party.each { |pkmn| playerParty.push(pkmn) }
     playerPartyStarts.push(playerParty.length)
     ally.party.each { |pkmn| playerParty.push(pkmn) }
-    setBattleRule("double") if !$PokemonTemp.battleRules["size"]
   end
   # Create the battle scene (the visual side of it)
   scene = pbNewBattleScene
@@ -398,12 +391,7 @@ def pbTrainerBattleCore(*args)
   playerTrainers    = [$Trainer]
   playerParty       = $Trainer.party
   playerPartyStarts = [0]
-  room_for_partner = (foeParty.length > 1)
-  if !room_for_partner && $PokemonTemp.battleRules["size"] &&
-     !["single", "1v1", "1v2", "1v3"].include?($PokemonTemp.battleRules["size"])
-    room_for_partner = true
-  end
-  if $PokemonGlobal.partner && !$PokemonTemp.battleRules["noPartner"] && room_for_partner
+  if $PokemonGlobal.partner && !$PokemonTemp.battleRules["noPartner"] && foeParty.length>1
     ally = PokeBattle_Trainer.new($PokemonGlobal.partner[1],$PokemonGlobal.partner[0])
     ally.id    = $PokemonGlobal.partner[2]
     ally.party = $PokemonGlobal.partner[3]
@@ -412,7 +400,6 @@ def pbTrainerBattleCore(*args)
     $Trainer.party.each { |pkmn| playerParty.push(pkmn) }
     playerPartyStarts.push(playerParty.length)
     ally.party.each { |pkmn| playerParty.push(pkmn) }
-    setBattleRule("double") if !$PokemonTemp.battleRules["size"]
   end
   # Create the battle scene (the visual side of it)
   scene = pbNewBattleScene
@@ -566,7 +553,6 @@ def pbAfterBattle(decision,canLose)
     end
   end
   Events.onEndBattle.trigger(nil,decision,canLose)
-  $game_player.straighten
 end
 
 Events.onEndBattle += proc { |_sender,e|

@@ -49,13 +49,12 @@ class Scene_Credits
 #Start Editing
 CREDIT=<<_END_
 
-Your credits go here.
+Pokémon Quantum
+by 
+ENLS & Voltseon
 
-Your credits go here.
-
-Your credits go here.
-
-Your credits go here.
+Winter Game Jam 2 Graphics
+by Relic Castle Staff
 
 Your credits go here.
 

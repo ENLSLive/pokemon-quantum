@@ -164,13 +164,12 @@ class PokeBattle_Battle
           #       Pokémon when an opponent replaces a fainted Pokémon in single
           #       battles. In double battles, etc. there is no such offer.
           if @internalBattle && @switchStyle && trainerBattle? && pbSideSize(0)==1 &&
-             opposes?(idxBattler) && !@battlers[0].fainted? && !switched.include?(0) &&
-             pbCanChooseNonActive?(0) && @battlers[0].effects[PBEffects::Outrage]==0
+             opposes?(idxBattler) && !@battlers[0].fainted? && pbCanChooseNonActive?(0) &&
+             @battlers[0].effects[PBEffects::Outrage]==0
             idxPartyForName = idxPartyNew
             enemyParty = pbParty(idxBattler)
             if isConst?(enemyParty[idxPartyNew].ability,PBAbilities,:ILLUSION)
-              new_index = pbLastInTeam(idxBattler)
-              idxPartyForName = new_index if new_index >= 0
+              idxPartyForName = pbGetLastPokeInTeam(idxBattler)
             end
             if pbDisplayConfirm(_INTL("{1} is about to send in {2}. Will you switch your Pokémon?",
                opponent.fullname,enemyParty[idxPartyForName].name))
@@ -224,11 +223,11 @@ class PokeBattle_Battle
   end
 
   # Actually performs the recalling and sending out in all situations.
-  def pbRecallAndReplace(idxBattler,idxParty,randomReplacement=false,batonPass=false)
+  def pbRecallAndReplace(idxBattler,idxParty,batonPass=false)
     @scene.pbRecall(idxBattler) if !@battlers[idxBattler].fainted?
     @battlers[idxBattler].pbAbilitiesOnSwitchOut   # Inc. primordial weather check
     @scene.pbShowPartyLineup(idxBattler&1) if pbSideSize(idxBattler)==1
-    pbMessagesOnReplace(idxBattler,idxParty) if !randomReplacement
+    pbMessagesOnReplace(idxBattler,idxParty)
     pbReplace(idxBattler,idxParty,batonPass)
   end
 
@@ -239,14 +238,14 @@ class PokeBattle_Battle
       elsif battler.hp<=battler.totalhp/2
         pbDisplayBrief(_INTL("OK, {1}! Come back!",battler.name))
       elsif battler.turnCount>=5
-        pbDisplayBrief(_INTL("{1}, that's enough! Come back!",battler.name))
+        pbDisplayBrief(_INTL("{1}, that’s enough! Come back!",battler.name))
       elsif battler.turnCount>=2
         pbDisplayBrief(_INTL("{1}, come back!",battler.name))
       else
         pbDisplayBrief(_INTL("{1}, switch out! Come back!",battler.name))
       end
     else
-      owner = pbGetOwnerName(battler.index)
+      owner = pbGetOwnerName(b.index)
       pbDisplayBrief(_INTL("{1} withdrew {2}!",owner,battler.name))
     end
   end
@@ -256,8 +255,7 @@ class PokeBattle_Battle
     party = pbParty(idxBattler)
     newPkmnName = party[idxParty].name
     if isConst?(party[idxParty].ability,PBAbilities,:ILLUSION)
-      new_index = pbLastInTeam(idxBattler)
-      newPkmnName = party[new_index].name if new_index >= 0
+      newPkmnName = party[pbLastInTeam(idxBattler)].name
     end
     if pbOwnedByPlayer?(idxBattler)
       opposing = @battlers[idxBattler].pbDirectOpposing

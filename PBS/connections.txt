@@ -38,5 +38,5 @@
 47,East,8,52,West,0
 # Route 2 (21) - Route 7 (47)
 21,East,77,47,West,0
-# Oak Town (32) - Route 1 (42)
-32,North,1,42,South,0
+# Route 1 (42) - Elm City (77)
+42,North,2,77,South,0

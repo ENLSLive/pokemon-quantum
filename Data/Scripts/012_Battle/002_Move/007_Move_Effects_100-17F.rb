@@ -1557,7 +1557,7 @@ end
 #===============================================================================
 class PokeBattle_Move_149 < PokeBattle_Move
   def pbMoveFailed?(user,targets)
-    if user.turnCount > 1
+    if user.turnCount>1 || user.lastRoundMoved>=0
       @battle.pbDisplay(_INTL("But it failed!"))
       return true
     end
@@ -2576,7 +2576,7 @@ end
 #===============================================================================
 class PokeBattle_Move_174 < PokeBattle_Move
   def pbMoveFailed?(user,targets)
-    if user.turnCount > 1
+    if user.turnCount>1 || user.lastRoundMoved>=0
       @battle.pbDisplay(_INTL("But it failed!"))
       return true
     end
@@ -2602,3 +2602,18 @@ end
 #       Actually, you might as well use high numbers like 500+ (up to FFFF),
 #       just to make sure later additions to Essentials don't clash with your
 #       new effects.
+
+#===============================================================================
+# Increases the user's evasion by 3 stages. (Quantize)
+#===============================================================================
+class PokeBattle_Move_176 < PokeBattle_StatUpMove
+  def initialize(battle,move)
+    super
+    @statUp = [PBStats::EVASION,3]
+  end
+  
+  def pbEffectGeneral(user)
+    user.effects[PBEffects::Minimize] = true
+    super
+  end
+end

@@ -1,11 +1,5 @@
-# Audio and Graphics folders
+# Audio folders
 Audio/
-Graphics/
-
-# Data folder, but not Data/Scripts folder
-Data/*
-!Data/Scripts.rxdata
-!Data/Scripts/
 
 # Files in the main project folder
 Game.ini
@@ -15,3 +9,13 @@ RGSS*.dll
 # Temp files
 
 ~*
+Data/Actors.rxdata
+Data/Armors.rxdata
+Data/Enemies.rxdata
+Data/Items.rxdata
+Data/Skills.rxdata
+Data/States.rxdata
+Data/Weapons.rxdata
+Data/System.rxdata
+*.anm
+

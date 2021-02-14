@@ -1,5 +1,6 @@
 class Game_Event < Game_Character
   attr_reader   :map_id
+  attr_reader   :erased
   attr_reader   :trigger
   attr_reader   :list
   attr_reader   :starting

@@ -115,3 +115,20 @@ Pokemon = CHARIZARD,63
     Item = SITRUSBERRY
 Pokemon = BLASTOISE,63
     Item = SITRUSBERRY
+#-------------------------------
+[VOLTSEON,Voltseon]
+Pokemon = DUNSPARCE,40
+    Gender = male
+    Ability = 0
+    IV = 31
+    Happiness = 255
+Pokemon = ESPEON,40
+    Gender = female
+    Ability = 0
+    IV = 31
+    Happiness = 255
+#-------------------------------
+[BUGCATCHER,Carl]
+LoseText = "Aww, I lost."
+Pokemon = DIGLETT,10
+Pokemon = BONSLY,11
