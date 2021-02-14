@@ -98,12 +98,7 @@ class Game_Character
   end
 
   def jump_speed_real
-    self.jump_speed_real = (2 ** (3 + 1)) * 0.8 if !@jump_speed_real   # 3 is walking speed
-    return @jump_speed_real
-  end
-
-  def jump_speed_real=(val)
-    @jump_speed_real = val * 40.0 / Graphics.frame_rate
+    return (2 ** (3 + 1)) * 0.8 * 40.0 / Graphics.frame_rate   # Walking speed
   end
 
   def move_frequency=(val)
@@ -437,34 +432,48 @@ class Game_Character
     end
   end
 
-  def move_generic(dir, turn_enabled = true)
-    turn_generic(dir) if turn_enabled
-    x_offset = (dir == 4) ? -1 : (dir == 6) ? 1 : 0
-    y_offset = (dir == 8) ? -1 : (dir == 2) ? 1 : 0
-    if passable?(@x, @y, dir)
-      turn_generic(dir)
-      @x += x_offset
-      @y += y_offset
+  def move_up(turn_enabled = true)
+    turn_up if turn_enabled
+    if passable?(@x, @y, 8)
+      turn_up
+      @y -= 1
       increase_steps
     else
-      check_event_trigger_touch(@x + x_offset, @y + y_offset)
+      check_event_trigger_touch(@x, @y-1)
     end
   end
 
   def move_down(turn_enabled = true)
-    move_generic(2, turn_enabled)
+    turn_down if turn_enabled
+    if passable?(@x, @y, 2)
+      turn_down
+      @y += 1
+      increase_steps
+    else
+      check_event_trigger_touch(@x, @y+1)
+    end
   end
 
   def move_left(turn_enabled = true)
-    move_generic(4, turn_enabled)
+    turn_left if turn_enabled
+    if passable?(@x, @y, 4)
+      turn_left
+      @x -= 1
+      increase_steps
+    else
+      check_event_trigger_touch(@x-1, @y)
+    end
   end
 
   def move_right(turn_enabled = true)
-    move_generic(6, turn_enabled)
-  end
-
-  def move_up(turn_enabled = true)
-    move_generic(8, turn_enabled)
+    turn_right if turn_enabled
+    if passable?(@x, @y, 6)
+      turn_right
+      @x += 1
+      increase_steps
+    else
+      check_event_trigger_touch(@x+1, @y)
+    end
   end
 
   def move_upper_left
@@ -659,7 +668,6 @@ class Game_Character
       if real_distance > 0   # Jumping to somewhere else
         @jump_count = 0
       else   # Jumping on the spot
-        @jump_speed_real = nil   # Reset jump speed
         @jump_count = Game_Map::REAL_RES_X / jump_speed_real   # Number of frames to jump one tile
       end
       @stop_count = 0
@@ -688,7 +696,7 @@ class Game_Character
     end
   end
 
-  def turn_generic(dir)
+  def turnGeneric(dir)
     return if @direction_fix
     oldDirection = @direction
     @direction = dir
@@ -696,10 +704,10 @@ class Game_Character
     pbCheckEventTriggerAfterTurning if dir != oldDirection
   end
 
-  def turn_down;  turn_generic(2); end
-  def turn_left;  turn_generic(4); end
-  def turn_right; turn_generic(6); end
-  def turn_up;    turn_generic(8); end
+  def turn_up;    turnGeneric(8); end
+  def turn_down;  turnGeneric(2); end
+  def turn_left;  turnGeneric(4); end
+  def turn_right; turnGeneric(6); end
 
   def turn_right_90
     case @direction

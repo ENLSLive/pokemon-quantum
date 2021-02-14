@@ -2806,7 +2806,7 @@ class PokeBattle_AI
     when "152"
     #---------------------------------------------------------------------------
     when "153"
-      score -= 95 if user.pbOpposingSide.effects[PBEffects::StickyWeb]
+      score -= 95 if target.pbOwnSide.effects[PBEffects::StickyWeb]
     #---------------------------------------------------------------------------
     when "154"
     #---------------------------------------------------------------------------
@@ -3064,7 +3064,7 @@ class PokeBattle_AI
     when "173"
     #---------------------------------------------------------------------------
     when "174"
-      score -= 90 if user.turnCount > 0
+      score -= 90 if user.turnCount>0 || user.lastRoundMoved>=0
     #---------------------------------------------------------------------------
     when "175"
       score += 30 if target.effects[PBEffects::Minimize]

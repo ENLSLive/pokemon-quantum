@@ -486,8 +486,7 @@ class PokemonGlobalMetadata
   attr_writer :hallOfFameLastNumber
 
   def hallOfFame
-    @hallOfFame = [] if !@hallOfFame
-    return @hallOfFame
+    return @hallOfFame || []
   end
 
   def hallOfFameLastNumber

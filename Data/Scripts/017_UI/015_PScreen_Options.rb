@@ -11,6 +11,7 @@ class PokemonSystem
   attr_writer   :runstyle
   attr_writer   :bgmvolume
   attr_writer   :sevolume
+  attr_accessor :input
   attr_writer   :textinput
 
   def initialize
@@ -26,7 +27,7 @@ class PokemonSystem
     @runstyle    = 0     # Run key functionality (0=hold to run, 1=toggle auto-run)
     @bgmvolume   = 100   # Volume of background music and ME
     @sevolume    = 100   # Volume of sound effects
-    @textinput   = 0     # Text input mode (0=cursor, 1=keyboard)
+    @input	     = 1     # Keyboard input ON by default, switch to 0 for classic by default
   end
 
   def textskin;  return @textskin || 0;    end
@@ -35,7 +36,7 @@ class PokemonSystem
   def runstyle;  return @runstyle || 0;    end
   def bgmvolume; return @bgmvolume || 100; end
   def sevolume;  return @sevolume || 100;  end
-  def textinput; return @textinput || 0;   end
+  def input;     return @input || 0;       end
   def tilemap;   return MAP_VIEW_MODE;     end
 end
 
@@ -486,7 +487,7 @@ class PokemonOption_Scene
          proc { $PokemonSystem.textskin },
          proc { |value|
            $PokemonSystem.textskin = value
-           MessageConfig.pbSetSpeechFrame("Graphics/Windowskins/" + $SpeechFrames[value])
+           MessageConfig.pbSetSpeechFrame("Graphics/Windowskins/"+$SpeechFrames[value])
          }
        ),
        NumberOption.new(_INTL("Menu Frame"),1,$TextFrames.length,
@@ -503,9 +504,9 @@ class PokemonOption_Scene
            MessageConfig.pbSetSystemFontName($VersionStyles[value])
          }
        ),
-       EnumOption.new(_INTL("Text Entry"),[_INTL("Cursor"),_INTL("Keyboard")],
-         proc { $PokemonSystem.textinput },
-         proc { |value| $PokemonSystem.textinput = value }
+       EnumOption.new(_INTL("Input Style"),[_INTL("Keyboard"),_INTL("Classic")],
+         proc { $PokemonSystem.input },
+         proc {|value| $PokemonSystem.input=value }
        ),
        EnumOption.new(_INTL("Screen Size"),[_INTL("S"),_INTL("M"),_INTL("L"),_INTL("Full")],
          proc { [$PokemonSystem.screensize,3].min },

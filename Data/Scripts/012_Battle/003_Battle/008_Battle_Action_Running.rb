@@ -52,8 +52,7 @@ class PokeBattle_Battle
       elsif @internalBattle
         pbDisplayPaused(_INTL("No! There's no running from a Trainer battle!"))
       elsif pbDisplayConfirm(_INTL("Would you like to forfeit the match and quit now?"))
-        pbSEPlay("Battle flee")
-        pbDisplay(_INTL("{1} forfeited the match!",self.pbPlayer.name))
+        pbDisplay(_INTL("{1} forfeited the match!",self.pbPlayer.name)) { pbSEPlay("Battle flee") }
         @decision = 3
         return 1
       end
@@ -61,8 +60,7 @@ class PokeBattle_Battle
     end
     # Fleeing from wild battles
     if $DEBUG && Input.press?(Input::CTRL)
-      pbSEPlay("Battle flee")
-      pbDisplayPaused(_INTL("You got away safely!"))
+      pbDisplayPaused(_INTL("You got away safely!")) { pbSEPlay("Battle flee") }
       @decision = 3
       return 1
     end
@@ -72,8 +70,7 @@ class PokeBattle_Battle
     end
     if !duringBattle
       if battler.pbHasType?(:GHOST) && NEWEST_BATTLE_MECHANICS
-        pbSEPlay("Battle flee")
-        pbDisplayPaused(_INTL("You got away safely!"))
+        pbDisplayPaused(_INTL("You got away safely!")) { pbSEPlay("Battle flee") }
         @decision = 3
         return 1
       end
@@ -82,8 +79,7 @@ class PokeBattle_Battle
         if BattleHandlers.triggerRunFromBattleAbility(battler.ability,battler)
           pbShowAbilitySplash(battler,true)
           pbHideAbilitySplash(battler)
-          pbSEPlay("Battle flee")
-          pbDisplayPaused(_INTL("You got away safely!"))
+          pbDisplayPaused(_INTL("You got away safely!")) { pbSEPlay("Battle flee") }
           @decision = 3
           return 1
         end
@@ -91,9 +87,8 @@ class PokeBattle_Battle
       # Held items that guarantee escape
       if battler.itemActive?
         if BattleHandlers.triggerRunFromBattleItem(battler.item,battler)
-          pbSEPlay("Battle flee")
           pbDisplayPaused(_INTL("{1} fled using its {2}!",
-             battler.pbThis,battler.itemName))
+             battler.pbThis,battler.itemName)) { pbSEPlay("Battle flee") }
           @decision = 3
           return 1
         end
@@ -140,8 +135,7 @@ class PokeBattle_Battle
       rate += @runCommand*30
     end
     if rate>=256 || @battleAI.pbAIRandom(256)<rate
-      pbSEPlay("Battle flee")
-      pbDisplayPaused(_INTL("You got away safely!"))
+      pbDisplayPaused(_INTL("You got away safely!")) { pbSEPlay("Battle flee") }
       @decision = 3
       return 1
     end

@@ -908,7 +908,7 @@ def pbAllRegionalSpecies(region)
   dexList = pbLoadRegionalDexes[region]
   return ret if !dexList || dexList.length==0
   for i in 0...dexList.length
-    ret[dexList[i]] = i if dexList[i] && dexList[i] > 0
+    ret[dexList[i]] = i if dexList[i]
   end
   ret.map! { |e| e ? e : 0 }   # Replace nils with 0s
   return ret
@@ -1172,10 +1172,10 @@ def pbLoadRpgxpScene(scene)
   end
   Graphics.transition(20)
   Graphics.freeze
-  $scene = oldscene
-  $scene.createSpritesets
+  oldscene.createSpritesets
   pbShowObjects(visibleObjects)
   Graphics.transition(20)
+  $scene = oldscene
 end
 
 

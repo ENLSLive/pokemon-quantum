@@ -48,7 +48,7 @@ class PokeBattle_Move_003 < PokeBattle_SleepMove
     return if !isConst?(@id,PBMoves,:RELICSONG)
     return if !user.isSpecies?(:MELOETTA)
     return if user.hasActiveAbility?(:SHEERFORCE) && @addlEffect>0
-    newForm = (user.Form+1)%2
+    newForm = (oldForm+1)%2
     user.pbChangeForm(newForm,_INTL("{1} transformed!",user.pbThis))
   end
 end
@@ -274,7 +274,7 @@ end
 #===============================================================================
 class PokeBattle_Move_012 < PokeBattle_FlinchMove
   def pbMoveFailed?(user,targets)
-    if user.turnCount > 1
+    if user.turnCount>1 || user.lastRoundMoved>=0
       @battle.pbDisplay(_INTL("But it failed!"))
       return true
     end
