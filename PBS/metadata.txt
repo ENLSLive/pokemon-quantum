@@ -433,8 +433,48 @@ ShowArea = true
 Outdoor = false
 HealingSpot = 77,27,18
 #-------------------------------
+[079]
+# Elm City Mart
+Outdoor = false
+ShowArea = false
+#-------------------------------
+[080]
+# Elm City Lab 1F
+Outdoor = false
+ShowArea = false
+#-------------------------------
 [081]
 # Route 2
 Bicycle = true
-Outdoor = true
+Outdoor = false
 ShowArea = true
+#-------------------------------
+[082]
+# Elm City Bicycle Shop
+Outdoor = false
+ShowArea = false
+#-------------------------------
+[083]
+# Elm City Gates
+Outdoor = false
+ShowArea = false
+#-------------------------------
+[084]
+# Elm City Lab Elevator
+Outdoor = false
+ShowArea = false
+#-------------------------------
+[088]
+# Elm City Lab 5F
+Outdoor = false
+ShowArea = false
+#-------------------------------
+[090]
+# Elm City
+Outdoor = false
+ShowArea = false
+#-------------------------------
+[091]
+# Cameron's Lab
+Outdoor = false
+ShowArea = false
