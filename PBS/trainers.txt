@@ -135,5 +135,5 @@ Pokemon = ARCANINE,40
 #-------------------------------
 [BUGCATCHER,Carl]
 LoseText = "Aww, I lost."
-Pokemon = DIGLETT,10
-Pokemon = BONSLY,11
+Pokemon = CATERPIE,5
+Pokemon = WEEDLE,4
