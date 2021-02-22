@@ -36,7 +36,7 @@ STRENGTH_ITEM = :STRENGTHITEM
 CUT_ITEM = :CUTITEM
 
 # The internal name of the item that will trigger Teleport
-TELEPORT_ITEM = :TELEPORTDEVICEW && :TELEPORTDEVICEP && :TELEPORTDEVICEB
+TELEPORT_ITEM = :TELEPORTDEVICEW
 
 # The switch needed to be able to teleport
 TELEPORTSWITCH = 100
@@ -114,7 +114,7 @@ end
 if USING_SURF_ITEM
   HiddenMoveHandlers::CanUseMove.delete(:SURF)
   HiddenMoveHandlers::UseMove.delete(:SURF)
-  
+
   def Kernel.pbSurf
     return false if $game_player.pbHasDependentEvents?
     move = getID(PBMoves,:SURF)
@@ -131,13 +131,13 @@ if USING_SURF_ITEM
     end
     return false
   end
-  
+
   ItemHandlers::UseInField.add(SURF_ITEM, proc do |item|
     $game_temp.in_menu = false
     Kernel.pbSurf
     return true
   end)
-  
+
   ItemHandlers::UseFromBag.add(SURF_ITEM, proc do |item|
     return false if $PokemonGlobal.surfing ||
                     pbGetMetadata($game_map.map_id,MetadataBicycleAlways) ||
@@ -170,7 +170,7 @@ if USING_FLY_ITEM
     end
     return 0
   end)
-  
+
   ItemHandlers::UseInField.add(FLY_ITEM, proc do |item|
     $game_temp.in_menu = false
     return false if !$PokemonTemp.flydata
@@ -199,19 +199,19 @@ end
 if USING_ROCK_SMASH_ITEM
   HiddenMoveHandlers::CanUseMove.delete(:ROCKSMASH)
   HiddenMoveHandlers::UseMove.delete(:ROCKSMASH)
-  
+
   ItemHandlers::UseFromBag.add(ROCK_SMASH_ITEM, proc do |item|
     if $game_player.pbFacingEvent && $game_player.pbFacingEvent.name == "Rock"
       return 2
     end
     return false
   end)
-  
+
   ItemHandlers::UseInField.add(ROCK_SMASH_ITEM, proc do |item|
     $game_player.pbFacingEvent.start
     return true
   end)
-  
+
   def Kernel.pbRockSmash
     if !pbCheckHiddenMoveBadge(BADGEFORROCKSMASH,false)
       Kernel.pbMessage(_INTL("It's a rugged rock, but an item may be able to smash it."))
@@ -234,7 +234,7 @@ end
 if USING_STRENGTH_ITEM
   HiddenMoveHandlers::CanUseMove.delete(:STRENGTH)
   HiddenMoveHandlers::UseMove.delete(:STRENGTH)
-  
+
   def Kernel.pbStrength
     if $PokemonMap.strengthUsed
       Kernel.pbMessage(_INTL("Strength made it possible to move boulders around."))
@@ -255,14 +255,14 @@ if USING_STRENGTH_ITEM
     end
     return false
   end
-  
+
   ItemHandlers::UseFromBag.add(STRENGTH_ITEM, proc do
     if $game_player.pbFacingEvent && $game_player.pbFacingEvent.name == "Boulder"
       return 2
     end
     return false
   end)
-  
+
   ItemHandlers::UseInField.add(STRENGTH_ITEM, proc { Kernel.pbStrength })
 end
 
@@ -274,7 +274,7 @@ end
 if USING_CUT_ITEM
   HiddenMoveHandlers::CanUseMove.delete(:CUT)
   HiddenMoveHandlers::UseMove.delete(:CUT)
-  
+
   def Kernel.pbCut
     if !pbCheckHiddenMoveBadge(BADGEFORCUT,false) && !$DEBUG
       Kernel.pbMessage(_INTL("This tree looks like it can be cut down."))
@@ -289,14 +289,14 @@ if USING_CUT_ITEM
     end
     return false
   end
-  
+
   ItemHandlers::UseFromBag.add(CUT_ITEM, proc do
     if $game_player.pbFacingEvent && $game_player.pbFacingEvent.name == "Tree"
       return 2
     end
     return false
   end)
-  
+
   ItemHandlers::UseInField.add(CUT_ITEM, proc { $game_player.pbFacingEvent.start })
 end
 
@@ -308,7 +308,7 @@ end
 #==============================================================================#
 
 if USING_TELEPORT
-  
+
   def Kernel.pbTeleport
     value = 1
     i = 0
@@ -394,21 +394,21 @@ if USING_TELEPORT
       return false
     #end
   end
-  
+
   def Kernel.pbTeleportFail
     Kernel.pbMessage(_INTL("The area seems to be blocked.\1"))
   end
-  
+
   def pbTeleportDisabled
     Kernel.pbMessage(_INTL("It seems you can't teleport right now.\1"))
   end
-  
+
   ItemHandlers::UseFromBag.add(TELEPORT_ITEM, proc do
     if $game_switches[TELEPORTSWITCH] == true
       return 2
     end
     return false
   end)
-  
+
   ItemHandlers::UseInField.add(TELEPORT_ITEM, proc { Kernel.pbTeleport })
 end
