@@ -3,13 +3,13 @@
 [000]
 PlayerA = POKEMONTRAINER_Red,trchar000,boy_bike,boy_surf,boy_run,boy_surf,boy_fish_offset,boy_fish_offset
 PlayerB = POKEMONTRAINER_Leaf,trchar001,girl_bike,girl_surf,girl_run,girl_surf,girl_fish_offset,girl_fish_offset
-TrainerVictoryME = Battle victory trainer.ogg
-WildVictoryME = Battle victory wild.ogg
-TrainerBattleBGM = Battle trainer.mid
+TrainerVictoryME = HGSSBattleVictoryTrainer.ogg
+WildVictoryME = HGSSBattleVictoryWild.ogg
+TrainerBattleBGM = 1-20 Battle! Trainer.ogg
 SurfBGM = Surfing.mid
 BicycleBGM = Bicycle.mid
 Home = 33,29,4,6
-WildBattleBGM = Battle wild.mid
+WildBattleBGM = 1-09 Battle! Wild Pokémon.ogg
 #-------------------------------
 [001]
 # Intro
