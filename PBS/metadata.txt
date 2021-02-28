@@ -163,6 +163,7 @@ ShowArea = true
 [032]
 # Oak Town
 Bicycle = false
+MapPosition = 0,11,12
 Outdoor = true
 Environment = None
 ShowArea = true
@@ -170,6 +171,7 @@ ShowArea = true
 [033]
 # Oak Town
 Bicycle = false
+MapPosition = 0,11,12
 Outdoor = false
 ShowArea = false
 #-------------------------------
@@ -224,14 +226,16 @@ BicycleAlways = true
 ShowArea = true
 #-------------------------------
 [042]
-# Route 1
+# Birch Passage
 Bicycle = true
+MapPosition = 0,11,11
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [043]
 # Oak Town Gate
 Bicycle = false
+MapPosition = 0,11,12
 Outdoor = false
 ShowArea = false
 #-------------------------------
@@ -268,6 +272,7 @@ ShowArea = true
 [048]
 # Frankly's Lab
 Bicycle = false
+MapPosition = 0,11,12
 Outdoor = false
 ShowArea = false
 #-------------------------------
@@ -422,45 +427,57 @@ BattleBack = city
 MapPosition = 1,13,16
 Outdoor = true
 #-------------------------------
+[076]
+# Birch Passage
+MapPosition = 0,11,11
+#-------------------------------
 [077]
 # Elm City
 Bicycle = true
+MapPosition = 0,11,9
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [078]
 # Elm City Poké Center
+MapPosition = 0,11,9
 Outdoor = false
 HealingSpot = 77,27,18
 #-------------------------------
 [079]
 # Elm City Mart
+MapPosition = 0,11,9
 Outdoor = false
 ShowArea = false
 #-------------------------------
 [080]
 # Elm City Lab 1F
+MapPosition = 0,11,9
 Outdoor = false
 ShowArea = false
 #-------------------------------
 [081]
-# Route 2
+# Rowan Route
 Bicycle = true
+MapPosition = 0,12,9
 Outdoor = false
 ShowArea = true
 #-------------------------------
 [082]
 # Elm City Bicycle Shop
+MapPosition = 0,11,9
 Outdoor = false
 ShowArea = false
 #-------------------------------
 [083]
 # Elm City Gates
+MapPosition = 0,11,9
 Outdoor = false
 ShowArea = false
 #-------------------------------
 [084]
 # Elm City Lab Elevator
+MapPosition = 0,11,9
 Outdoor = false
 ShowArea = false
 #-------------------------------
@@ -471,10 +488,18 @@ ShowArea = false
 #-------------------------------
 [090]
 # Elm City
+MapPosition = 0,11,9
 Outdoor = false
 ShowArea = false
 #-------------------------------
 [091]
 # Cameron's Lab
+MapPosition = 0,11,9
 Outdoor = false
 ShowArea = false
+#-------------------------------
+[096]
+# Juniper Cave
+MapPosition = 0,11,11
+Outdoor = false
+ShowArea = true

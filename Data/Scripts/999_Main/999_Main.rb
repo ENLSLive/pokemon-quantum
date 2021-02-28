@@ -16,7 +16,7 @@ def pbCallTitle
   # directory without a file extension, to show before the
   # actual title screen.  Second parameter is the actual
   # title screen filename, also in Titles with no extension.
-  return Scene_Intro.new(['intro1'], 'splash')
+  return Scene_Intro.new(['intro1','intro2'], 'splash')
 end
 
 def mainFunction

@@ -31,7 +31,7 @@ end
 # Configuration constant used to style the Title Screen
 # Add multiple modifiers to add visual effects to the Title Screen
 # Non additive modifiers do not stack i.e. you can only use one of each type
-MTS_MODIFIERS = ["background:bw", "overlay2", "logoY:172", "logo:shine", "misc4_s2_x284_y339", "effect6_y312", "bgm:title_bw"]
+MTS_MODIFIERS = ["background3", "overlay6 ", "logoY:250", "logoX:260", "logo:shine", "effect3", "bgm:title_hgss"]
 #-------------------------------------------------------------------------------
 #                                  PRESETS
 #-------------------------------------------------------------------------------
@@ -85,7 +85,7 @@ MTS_MODIFIERS = ["background:bw", "overlay2", "logoY:172", "logo:shine", "misc4_
 # Config used for determining the cry of species to play, along with displaying
 # a certain Pokemon sprite if applicable. Leave it as nil in order not to play
 # a species cry, otherwise set as either a symbolic or numeric value
-MTS_SPECIES = :PIKACHU
+MTS_SPECIES = nil
 # Applies a form to Pokemon species
 MTS_SPECIES_FORM = 0
 # Applies female form
