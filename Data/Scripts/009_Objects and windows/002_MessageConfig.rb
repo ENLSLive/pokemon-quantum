@@ -1,5 +1,5 @@
 module MessageConfig
-  FontName        = "Power Green"
+  FontName        = "Power Red and Green"
   # in Graphics/Windowskins/ (specify empty string to use the default windowskin)
   TextSkinName    = "speech quantum"
   ChoiceSkinName  = "choice quantum"

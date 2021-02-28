@@ -47,7 +47,7 @@ module Graphics
   class << Graphics
     alias fast_forward_update update
   end
-  
+
   def self.update
     if $CanToggle && Input.trigger?(Input::F)
       $GameSpeed += 1
@@ -64,9 +64,9 @@ module Input
   class << Input
     alias fast_forward_button_to_key buttonToKey
   end
-  
+
   F = 50
-  
+
   def self.buttonToKey(btn)
     return [0x12] if btn == Input::F
     fast_forward_button_to_key(btn)
