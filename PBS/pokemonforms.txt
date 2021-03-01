@@ -1648,3 +1648,10 @@ Color = Yellow
 FormName = Original Color
 Color = Red
 Pokedex = This gorgeous Magearna looks as it did at the time of its invention. Its luxurious decoration pleased the king's daughter.
+#-------------------------------
+[BURMY,3]
+FormName = Quantum Virus
+Type1 = POISON
+Type2 = QUANTUM
+Color = Red
+Pokedex = This virus Pokémon is pretty cool.

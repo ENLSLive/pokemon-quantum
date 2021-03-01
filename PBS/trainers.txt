@@ -116,16 +116,20 @@ Pokemon = CHARIZARD,63
 Pokemon = BLASTOISE,63
     Item = SITRUSBERRY
 #-------------------------------
+[RIVAL1,Levi]
+LoseText = "Levi: \bYou just don't get it, do you?"
+Pokemon = BURMY,7
+	Form = 3
+	Gender = male
+#-------------------------------
 [VOLTSEON,Voltseon]
 Pokemon = DUNSPARCE,40
     Gender = male
     Ability = 0
-    IV = 31
     Happiness = 255
 Pokemon = ESPEON,40
     Gender = female
     Ability = 0
-    IV = 31
     Happiness = 255
 #-------------------------------
 [ENLS,ENLS]
@@ -137,3 +141,8 @@ Pokemon = ARCANINE,40
 LoseText = "Aww, I lost."
 Pokemon = CATERPIE,5
 Pokemon = WEEDLE,4
+#-------------------------------
+[LASS,Ella]
+LoseText = "You didn't have to win so convincingly!"
+Pokemon = PLUSLE,17
+Pokemon = MINUN,17
