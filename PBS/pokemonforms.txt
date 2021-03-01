@@ -1649,9 +1649,27 @@ FormName = Original Color
 Color = Red
 Pokedex = This gorgeous Magearna looks as it did at the time of its invention. Its luxurious decoration pleased the king's daughter.
 #-------------------------------
+# 		QUANTUM FORMS
+#-------------------------------
 [BURMY,3]
 FormName = Quantum Virus
 Type1 = POISON
 Type2 = QUANTUM
 Color = Red
 Pokedex = This virus Pokémon is pretty cool.
+#-------------------------------
+[WAILMER,1]
+FormName = Quantum Whale
+Type1 = QUANTUM
+Type2 = WATER
+Moves = 1,SPLASH,1,MINIMIZE,4,GROWL,7,WATERGUN,9,MICROSHOT,13,WHIRLPOOL,17,QUANTIZE,19,QUANTUMPULSE,22,WATERPULSE,25,BRINE,29,REST,33,QUANTUMLEAP,37,WATERSPOUT,41,DIVE,45,ATOMICBOOST,49,HYDROPUMP,53,HEAVYSLAM
+Color = Yellow
+Pokedex = This whale Pokémon is pretty small. huge mon small now.
+#-------------------------------
+[WAILORD,1]
+FormName = Quantum Whale
+Type1 = QUANTUM
+Type2 = WATER
+Moves = 1,SOAK,1,MINIMIZE,1,HEAVYSLAM,1,SPLASH,1,GROWL,1,WATERGUN,1,ROLLOUT,4,GROWL,7,WATERGUN,9,MICROSHOT,13,QUANTIZE,17,ASTONISH,19,QUANTUMPULSE,22,WATERPULSE,25,BRINE,29,REST,33,QUANTUMLEAP,37,WATERSPOUT,41,DIVE,45,ATOMICBOOST,49,HYDROPUMP,53,HEAVYSLAM
+Color = Yellow
+Pokedex = This whale Pokémon is even smaller. ironic.

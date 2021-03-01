@@ -4432,7 +4432,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 20
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = VAPOREON,Item,WATERSTONE,JOLTEON,Item,THUNDERSTONE,FLAREON,Item,FIRESTONE,LEAFEON,Location,28,GLACEON,Location,34,SYLVEON,HappinessMoveType,FAIRY,ESPEON,HappinessDay,,UMBREON,HappinessNight,
+Evolutions = VAPOREON,Item,WATERSTONE,JOLTEON,Item,THUNDERSTONE,FLAREON,Item,FIRESTONE,LEAFEON,Location,28,GLACEON,Location,34,SYLVEON,HappinessMoveType,FAIRY,ESPEON,HappinessDay,,UMBREON,HappinessNight,,SCHRODEON,Location,92,
 #-------------------------------
 [134]
 Name = Vaporeon
@@ -26605,8 +26605,8 @@ BattlerShadowSize = 3
 Evolutions = 
 #-------------------------------
 [815]
-Name = Quanteon
-InternalName = QUANTEON
+Name = Schrodeon
+InternalName = SCHRODEON
 Type1 = QUANTUM
 BaseStats = 70,60,65,100,115,115
 GenderRate = FemaleOneEighth
