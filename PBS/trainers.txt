@@ -137,6 +137,20 @@ Pokemon = WATARDUM,40
 Pokemon = ARCANINE,40
     Gender = female
 #-------------------------------
+[BEEKEEPER,Barry]
+Items = SUPERPOTION,HYPERPOTION,REVIVE,ANTIDOTE,PARALYZEHEAL,AWAKENING,FULLHEAL
+LoseText = "I wanna bee the very best!"
+Pokemon = HERDIER,25
+	Gender = male
+	Moves = TAKEDOWN,CRUNCH,HOWL,ICEFANG
+	Happiness = 200
+	Ability = 0
+	EV = ,80,80,120,,80
+	Item = SOOTHEBELL
+	IV = 31,31,31,31,31,31
+	Nature = BOLD
+Pokemon = COMBEE,24
+#-------------------------------
 [BUGCATCHER,Carl]
 LoseText = "Aww, I lost."
 Pokemon = CATERPIE,5

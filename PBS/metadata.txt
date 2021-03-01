@@ -7,7 +7,7 @@ TrainerVictoryME = HGSSBattleVictoryTrainer.ogg
 WildVictoryME = HGSSBattleVictoryWild.ogg
 TrainerBattleBGM = 1-20 Battle! Trainer.ogg
 SurfBGM = Surfing.mid
-BicycleBGM = Bicycle.mid
+BicycleBGM = HGSS-155-Bike.ogg
 Home = 33,29,4,6
 WildBattleBGM = 1-09 Battle! Wild Pokémon.ogg
 #-------------------------------
