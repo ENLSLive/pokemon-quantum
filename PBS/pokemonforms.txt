@@ -1653,8 +1653,12 @@ Pokedex = This gorgeous Magearna looks as it did at the time of its invention. I
 #-------------------------------
 [BURMY,3]
 FormName = Quantum Virus
+BaseStats = 50,50,50,50,50,50
 Type1 = POISON
 Type2 = QUANTUM
+Abilities = POISONPOINT
+HiddenAbility = NATURALCURE
+Moves = 1,TOXIC,1,INFESTATION,5,DILATE,10,QUANTICCHARGE,15,VENOSHOCK,20,HIDDENPOWER,25,FUSIONSPLIT,30,GASTROACID
 Color = Red
 Pokedex = This virus Pokémon is pretty cool.
 #-------------------------------
